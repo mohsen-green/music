@@ -33,7 +33,7 @@ class AlbumController extends Controller
     {
 
         $validate = $request->validate([
-            'name' => 'required',
+            'name' => 'required|string|max:50|unique:albums',
             'name_artist' => 'required',
             'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
@@ -70,7 +70,7 @@ class AlbumController extends Controller
 
 
         $validate = $request->validate([
-            'name' => 'required',
+            'name' => 'required|string|max:50|unique:albums,albums.name',
             'name_artist' => 'required',
             'img' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 

@@ -51,7 +51,7 @@
     <div class="row">
         <div class="col-lg-12">
 
-            <form action="{{url('channel')}}" enctype="multipart/form-data" method="post">
+            <form action="{{url('channel/'.$channel->_id)}}" enctype="multipart/form-data" method="post">
                 <input name="_method" type="hidden" value="PUT"">
 
                 @csrf

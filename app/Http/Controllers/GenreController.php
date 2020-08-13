@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 
 class GenreController extends Controller
 {
-  
+
     public function index()
     {
 
@@ -28,7 +28,7 @@ class GenreController extends Controller
     {
 
         $validate = $request->validate([
-            'name' => 'required|string|min:2|max:20|unique:genre,genre.id',
+            'name' => 'required|string|max:20|unique:genres',
             'slug' => 'required',
             'file' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -67,7 +67,7 @@ class GenreController extends Controller
     {
 
         $validate = $request->validate([
-            'name' => 'required',
+            'name' => 'required|string|max:20|unique:genres,genres.name',
             'slug' => 'required',
             'file' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 

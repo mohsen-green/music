@@ -33,7 +33,7 @@ class ChannelController extends Controller
     {
 
         $validate = $request->validate([
-            'name' => 'required',
+            'name' => 'required|string|unique:channels,',
             'des' => 'required',
             'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'music' => 'required',
@@ -78,7 +78,7 @@ class ChannelController extends Controller
 
         // validata
         $validate = $request->validate([
-            'name' => 'required',
+            'name' => 'required|string|unique:channels,channels.name',
             'des' => 'required',
             'img' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'music' => 'required',
