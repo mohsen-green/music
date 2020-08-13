@@ -25,9 +25,11 @@
         <server name="DB_DATABASE" value="testdb"/>
           <server name="DB_HOST" value="127.0.0.1"/>
         <server name="DB_PORT" value="27017"/>
+            <server name="DB_USERNAME" value=""/>
+        <server name="DB_PASSWORD" value=""/>
         <server name="MAIL_DRIVER" value="array"/>
         <server name="QUEUE_CONNECTION" value="sync"/>
         <server name="SESSION_DRIVER" value="array"/>
-  
+
     </php>
 </phpunit>

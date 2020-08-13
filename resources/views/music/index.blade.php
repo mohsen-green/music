@@ -122,7 +122,10 @@
 
                             </tbody>
                         </table>
+
+                        <div class="text-center d-flex justify-content-center mt-2">
                         {{ $musics->links() }}
+                        </div>
                     </div>
 
 

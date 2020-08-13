@@ -50,8 +50,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        if($this->isHttpException($exception)){
 
+
+        if($this->isHttpException($exception)){
            if($exception->getStatusCode() == 403){
 
                return response()->view('errores.403');

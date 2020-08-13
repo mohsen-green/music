@@ -19,6 +19,7 @@ class AlbumTest extends TestCase
      */
     public function test_index()
     {
+        
         $this->loginWithFakeUser();
         $respnse = $this->get('album');
         $respnse->assertOk();
@@ -68,6 +69,7 @@ class AlbumTest extends TestCase
 
     public function loginWithFakeUser()
     {
+
         $user = User::first();
         $this->be($user);
     }

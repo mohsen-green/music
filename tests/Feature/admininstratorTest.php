@@ -35,6 +35,7 @@ class admininstratorTest extends TestCase
      */
     public function testـcreate_index_user()
     {
+        
         // قبل از تست از کامنت خارج شود و بعد از اولین تست کامن شود
        // $this->seed();
         $this->loginWithFakeUser();
